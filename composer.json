@@ -1,12 +1,12 @@
 {
-    "name": "onecentlin/laravel-adminer",
+    "name": "dig-dice/laravel-adminer",
     "description": "Laravel Adminer Database Manager",
     "keywords": ["laravel5", "laravel6", "adminer", "database", "management", "mysql", "sqlite"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Winnie Lin",
-            "email": "onecentlin@gmail.com"
+            "name": "Seiki Koga",
+            "email": "seiki.koga@rocktoon.co.jp"
         }
     ],
     "require": {
