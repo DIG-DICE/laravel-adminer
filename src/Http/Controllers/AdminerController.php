@@ -15,28 +15,13 @@ class AdminerController extends Controller
         $this->middleware('adminer');
 
         // adminer version
-        $this->version = '4.7.4';
+        $this->version = '4.7.5';
         // default adminer
-        $this->adminer = $this->getAdminerFileName();
+        $this->adminer = 'adminer-4.7.5.php';
     }
 
     public function index()
     {
-        $locale = strtolower(app()->getLocale());
-
-        // localization
-        switch ($locale) {
-            case 'zh-tw':
-            case 'zh-hant':
-                $this->adminer = $this->getAdminerFileName('zh-tw');
-                break;
-        }
-
         require(__DIR__.'/../../../resources/'.$this->adminer);
-    }
-
-    private function getAdminerFileName($locale = 'en')
-    {
-        return sprintf('adminer-%s-%s.php', $this->version, strtolower($locale));
     }
 }
